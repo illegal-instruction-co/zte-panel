@@ -1,6 +1,6 @@
 # zte-panel
 
-I had a modem that I bought cheaply from China. For some reason, I needed to change the IMEI, and I struggled with it. I tried hundreds of drivers and Chinese tools. I even bought subscriptions from some of them, but I couldn't get the job done. Later, I discovered that there was a way to do it in the ZXIC firmware, and now I'm sharing it with everyone for a simpler world.
+I had a modem that I bought cheaply from China. For some reason, I needed to change the IMEI, and I struggled with it. I tried hundreds of drivers and Chinese tools. I even bought subscriptions from some of them, but I couldn't get the job done. Later, I discovered that there was a hidden route to do it in the ZXIC firmware, and now I'm sharing it with everyone for a simpler world.
 
 ## Modifying IMEI and MAC on ZTE ZXIC Chipset Modems
 
