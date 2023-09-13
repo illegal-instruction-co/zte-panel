@@ -1,3 +1,12 @@
+/**
+ * @file main.cpp
+ * @author mbk - mt - illegal-instruction-co (machinetherapist@gmail.com)
+ * @date 2023-09-13
+ *
+ * @copyright Copyright (c) 2023
+ *
+ */
+
 #include "ZTEPanel.h"
 
 #include "Command.h"
