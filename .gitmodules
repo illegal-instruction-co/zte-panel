@@ -1,0 +1,3 @@
+[submodule "vendor/HTTPRequest"]
+	path = vendor/HTTPRequest
+	url = https://github.com/elnormous/HTTPRequest.git
