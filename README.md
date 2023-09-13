@@ -1,4 +1,7 @@
 # zte-panel
+
+I had a modem that I bought cheaply from China. For some reason, I needed to change the IMEI, and I struggled with it. I tried hundreds of drivers and Chinese tools. I even bought subscriptions from some of them, but I couldn't get the job done. Later, I discovered that there was a way to do it in the ZXIC firmware, and now I'm sharing it with everyone for a simpler world.
+
 ## Modifying IMEI and MAC on ZTE ZXIC Chipset Modems
 
 This program allows users to modify the IMEI, WiFi MAC, and LAN MAC addresses on ZTE ZXIC chipset modems without the need for USB connections or AT commands. It provides a simple command-line interface to interact with the modem. Users can specify the modem's IP address and password and then use the "-s" or "--set" command to input new IMEI, WiFi MAC, and LAN MAC addresses. The program establishes a connection to the modem, updates the specified values, and reboots the modem for the changes to take effect.
