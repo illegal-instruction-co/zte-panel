@@ -43,12 +43,12 @@ int main(int argc, char** argv) {
     });
 
     for (int i = 1; i < argc; ++i) {
-        bool found = true;
+        bool found = false;
         for (const auto& command : g_commands)
-            if (command.Match(argv[i]))
+            if (command.Match(argv[i])) {
                 command.cb();
-            else
-                found = false;
+                found = true;
+            }
 
         if (!found)
             cout << "Unknown command: " << argv[i] << endl;
