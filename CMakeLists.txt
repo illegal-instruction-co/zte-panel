@@ -11,4 +11,4 @@ include_directories(include
 
 add_subdirectory(src)
 
-set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
+install(TARGETS Panel DESTINATION bin)
