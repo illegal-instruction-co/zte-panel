@@ -20,8 +20,25 @@ int main(int argc, char** argv) {
 
     string ip = "192.168.0.1";
     string password = "admin";
+    string imei;
+    string wifiMac;
+    string lanMac;
 
     static vector<Command> g_commands;
+
+    g_commands.emplace_back("-h", "--help", []() {
+        cout << "-----------------------------------------" << endl;
+        cout << "Set IP: -i or --ip" << endl;
+        cout << "Set Password: -p or --password" << endl;
+        cout << "Set IMEI: -im or --imei" << endl;
+        cout << "Set WIFI MAC: -wm or --wifimac" << endl;
+        cout << "Set LAN MAC: -lm or --lanmac" << endl;
+        cout << "Set LAN MAC: -lm or --lanmac" << endl;
+        cout << "-----------------------------------------" << endl;
+        cout << "Run settings: -s or --set" << endl;
+        cout << "Example: ./Panel -i -p -im -s" << endl;
+        cout << "-----------------------------------------" << endl;
+    });
 
     g_commands.emplace_back("-i", "--ip", [&ip]() {
         cout << "IP address: ";
@@ -33,18 +50,23 @@ int main(int argc, char** argv) {
         cin >> password;
     });
 
-    g_commands.emplace_back("-s", "--set", [ip, password]() {
-        string imei, wifiMac, lanMac;
-
+    g_commands.emplace_back("-im", "--imei", [&imei]() {
         cout << "IMEI: ";
         cin >> imei;
+    });
 
+    g_commands.emplace_back("-wm", "--wifimac", [&wifiMac]() {
         cout << "WIFI MAC: ";
         cin >> wifiMac;
+    });
 
+    g_commands.emplace_back("-lm", "--lanmac", [&lanMac]() {
         cout << "LAN MAC: ";
         cin >> lanMac;
+    });
 
+
+    g_commands.emplace_back("-s", "--set", [ip, password, imei, wifiMac, lanMac]() {
         ZTEPanel panel(ip, password);
         panel.Login();
         panel.Set(imei, wifiMac, lanMac);
