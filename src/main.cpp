@@ -73,6 +73,9 @@ int main(int argc, char** argv) {
         panel.Reboot();
     });
 
+    if (!argc)
+        g_commands[0].cb();
+        
     for (int i = 1; i < argc; ++i) {
         bool found = false;
         for (const auto& command : g_commands)
