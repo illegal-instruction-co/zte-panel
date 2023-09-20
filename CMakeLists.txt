@@ -11,4 +11,4 @@ include_directories(include
 
 add_subdirectory(src)
 
-install(TARGETS Panel DESTINATION bin)
+install(TARGETS ${PROJECT_NAME} DESTINATION bin)
