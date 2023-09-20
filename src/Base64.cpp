@@ -1,5 +1,7 @@
 #include "Base64.h"
 
+#include <cstdint>
+
 using namespace std;
 
 string Base64::Encode(const void *data, size_t size)
