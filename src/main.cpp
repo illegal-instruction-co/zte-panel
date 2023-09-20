@@ -36,7 +36,7 @@ int main(int argc, char** argv) {
         cout << "Set LAN MAC: -lm or --lanmac" << endl;
         cout << "-----------------------------------------" << endl;
         cout << "Run settings: -s or --set" << endl;
-        cout << "Example: ./Panel -i -p -im -s" << endl;
+        cout << "Example: ./zte-panel -i -p -im -s" << endl;
         cout << "-----------------------------------------" << endl;
     });
 
@@ -72,10 +72,10 @@ int main(int argc, char** argv) {
         panel.Set(imei, wifiMac, lanMac);
         panel.Reboot();
     });
-
-    if (!argc)
+    
+    if (argc == 1)
         g_commands[0].cb();
-        
+
     for (int i = 1; i < argc; ++i) {
         bool found = false;
         for (const auto& command : g_commands)
